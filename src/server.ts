@@ -38,7 +38,7 @@ const { PORT } = process.env // get environment variables
 // Configuration of the options CORS
 const corsOptions = {
   origin: '*', // Set allowed source
-  methods: ['GET,PUT,DELETE,POST,OPTIONS'], // Set allowed methods
+  methods: ['GET', 'PUT', 'DELETE', 'POST', 'OPTIONS'], // Set allowed methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Set allowed headers
 }
 
