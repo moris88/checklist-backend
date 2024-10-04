@@ -21,6 +21,10 @@ const read = async (): Promise<{
     cache: 'no-cache',
   })
     .then((res) => res.json())
+    .then((data) => {
+      console.log('DATA!', data)
+      return data
+    })
     .catch((error) => {
       console.log('ERROR!', error)
       return null
@@ -32,12 +36,19 @@ const save = async (data: any): Promise<boolean> => {
   if (!STORE_NAME) {
     return false
   }
-  const blob = await put(STORE_NAME, data, {
+  if (!BLOB_READ_WRITE_TOKEN) {
+    return false
+  }
+  const parseData = JSON.stringify(data)
+  const blob = await put(STORE_NAME, parseData, {
     access: 'public',
     addRandomSuffix: false,
     token: BLOB_READ_WRITE_TOKEN,
   })
-    .then(() => true)
+    .then((res) => {
+      console.log('SAVED!', res)
+      return true
+    })
     .catch((error) => {
       console.log('ERROR!', error)
       return false
