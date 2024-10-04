@@ -3,14 +3,14 @@
     "public": true,
     "builds": [
         {
-            "src": "/dist/server.js",
+            "src": "dist/server.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
             "src": "/((?!.*\\.\\w+$).*)",
-            "dest": "/dist/server.js",
+            "dest": "dist/server.js",
             "methods": [
                 "GET",
                 "POST",
