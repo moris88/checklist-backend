@@ -1,0 +1,41 @@
+{
+  "name": "checklist-work-backend",
+  "version": "0.0.1",
+  "main": "dist/server.js",
+  "scripts": {
+    "lint": "eslint src --max-warnings=5",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier src --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "build": "esbuild src/server.ts --bundle --platform=node --minify --outfile=dist/server.js",
+    "dev": "nodemon ./src/server.ts",
+    "serve": "node ./dist/server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/blob": "^0.24.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.5.4",
+    "@types/node-fetch": "^2.6.4",
+    "esbuild": "^0.19.2",
+    "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.10.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "*",
+    "typescript-eslint": "^8.8.0"
+  }
+}
