@@ -1,6 +1,6 @@
 import * as crypto from 'crypto'
 import { StatusToken, Token, User, Lookup } from '@/types'
-import { trimToken, readDatabase, writeDatabase } from './utils'
+import { trimToken, readDatabase, writeDatabase } from '@/libs'
 
 export async function getUsersToken(): Promise<User[]> {
   return await readDatabase<User>('users')
