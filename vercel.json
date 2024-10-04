@@ -9,7 +9,7 @@
     ],
     "routes": [
         {
-            "src": "/((?!.*\\.\\w+$).*)",
+            "src": "/(.*)",
             "dest": "dist/server.js",
             "methods": [
                 "GET",
