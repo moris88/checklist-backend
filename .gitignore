@@ -8,5 +8,5 @@
 /dist
 
 # logs
-
+db.json
 .vercel
