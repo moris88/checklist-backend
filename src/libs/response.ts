@@ -60,6 +60,7 @@ export const formatResponseError = ({
     status,
     error,
   }
+  res.setHeader('Access-Control-Allow-Origin', '*')
   res.status(status).json(responseServer)
 }
 
@@ -91,6 +92,7 @@ export const formatResponseWarning = ({
     status,
     warning,
   }
+  res.setHeader('Access-Control-Allow-Origin', '*')
   res.status(status).json(responseServer)
 }
 
@@ -204,5 +206,6 @@ export const formatResponse = ({
       break
     }
   }
+  res.setHeader('Access-Control-Allow-Origin', '*')
   res.status(responseServer.status).json(responseServer)
 }
