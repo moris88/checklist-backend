@@ -1,5 +1,25 @@
 {
+    "buildCommand": "pnpm build",
+    "installCommand": "pnpm install",
+    "devCommand": "pnpm serve",
+    "outputDirectory": "dist",
+    "framework": null,
+    "public": true,
     "version": 2,
+    "env": {
+        "BLOB_READ_WRITE_TOKEN": "vercel_blob_rw_MuSYUeogPrKAISOA_USJ45lMrG0ZjF6khiK25KaeSQiJl92",
+        "STORE_URL": "https://musyueogprkaisoa.public.blob.vercel-storage.com",
+        "STORE_NAME": "db.json"
+    },
+    "alias": [
+        "checklist-work-backend.vercel.app"
+    ],
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/api"
+        }
+    ],
     "routes": [
         {
             "src": "/(.*)",
