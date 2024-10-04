@@ -33,12 +33,12 @@ import {
 
 const app = express() // create a new express application instance
 dotenv.config() // load .env file
-const { PORT, ORIGIN } = process.env // get environment variables
+const { PORT } = process.env // get environment variables
 
 // Configuration of the options CORS
 const corsOptions = {
-  origin: ORIGIN, // Set allowed source
-  methods: ['GET,PUT,DELETE,POST'], // Set allowed methods
+  origin: '*', // Set allowed source
+  methods: ['GET,PUT,DELETE,POST,OPTIONS'], // Set allowed methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Set allowed headers
 }
 
@@ -107,7 +107,7 @@ app.get('/api/v1/search', search)
 app.all('*', generalPathMatch)
 
 // Start the server
-app.listen(PORT, () => {
+app.listen(PORT ?? 5000, () => {
   console.log('-->SERVER STARTED!')
   console.log(`Webservice listening on port ${PORT}`)
 })
