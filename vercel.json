@@ -1,8 +1,8 @@
 {
-    "buildCommand": "pnpm build",
+    "buildCommand": "pnpm build:v1",
     "installCommand": "pnpm install",
-    "devCommand": "pnpm serve",
-    "outputDirectory": "dist",
+    "devCommand": "pnpm serve", 
+    "outputDirectory": "./api/v1",
     "framework": null,
     "public": true,
     "version": 2,
@@ -14,16 +14,10 @@
     "alias": [
         "checklist-work-backend.vercel.app"
     ],
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/api"
-        }
-    ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "dist/server.js",
+            "dest": "api/v1/server.js",
             "methods": [
                 "GET",
                 "POST",

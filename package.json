@@ -7,7 +7,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier src --check",
     "prettier:fix": "npm run prettier -- --write",
-    "build": "esbuild src/server.ts --bundle --platform=node --minify --outfile=dist/server.js",
+    "build:v1": "esbuild src/server.ts --bundle --platform=node --minify --outfile=api/v1/server.js",
     "dev": "nodemon ./src/server.ts",
     "serve": "node ./dist/server.js"
   },
