@@ -40,4 +40,4 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Build Test
-        run: pnpm build
+        run: pnpm build:v1
