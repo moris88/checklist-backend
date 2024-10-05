@@ -19,6 +19,7 @@ This is a checklist app that allows users to create a checklist and add items to
 ### Requirements
 
 - Vercel Package Manager (Vercel CLI) - `npm install -g vercel`
+- PNPM - `npm install -g pnpm`
 
 ## Links
 
