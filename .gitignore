@@ -5,7 +5,7 @@
 .env
 
 # production build
-/dist
+/api
 
 # logs
 db.json
